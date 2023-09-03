@@ -7,5 +7,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../commons-beanutils-1.9.4-src.zip!/commons-beanutils-1.9.4-src/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../commons-beanutils-1.9.4-src.zip!/commons-beanutils-1.9.4-src/src/test/java" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
