@@ -94,7 +94,7 @@ public class Executor {
     }
 
     String[] parseInput(String raw){
-        if(raw.length() == 0) return new String[]{""};
+        if(raw.isEmpty()) return new String[]{""};
         Matcher mather = Pattern.compile("[^\" ]+|\"[^\"]*\"").matcher(raw);
 
         ArrayList<String> line = new ArrayList<>();

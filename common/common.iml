@@ -7,14 +7,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
-        <CLASSES />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../opencsv-5.8.jar!/" />
+        </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="jar://$MODULE_DIR$/../commons-beanutils-1.9.4-src.zip!/commons-beanutils-1.9.4-src/src/main/java" />
-          <root url="jar://$MODULE_DIR$/../commons-beanutils-1.9.4-src.zip!/commons-beanutils-1.9.4-src/src/test/java" />
-        </SOURCES>
+        <SOURCES />
       </library>
     </orderEntry>
   </component>

@@ -4,7 +4,75 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="started writing server" />
+    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="first_commit_new_repo">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/OpenCSV.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/exceptions/NotEnoughArgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/exceptions/WrongArgument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/exceptions/WrongField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/managers/IoManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/AvailableCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/AddCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/AddIfMaxCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/ClearCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/CommandInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/CountGreaterThanTransferredStudentsCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/ExecuteScriptCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/Executor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/ExitCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/HelpCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/InfoCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/PrintFieldDescendingSemesterEnumCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/RemoveAnyByShouldBeExpelledCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/RemoveByIdCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/RemoveFirstCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/SaveCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/ShowCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/UpdateCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/AbstractClientCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/commands/serverCommands/AbstractServerCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/exceptions/NotEnoughArgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/exceptions/WrongArgument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/exceptions/WrongField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/managers/IoManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/things/class-use/Coordinates.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/things/class-use/Person.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/things/class-use/Semester.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/things/class-use/StudyGroup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/util/ServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/util/workingWithClient/GeneratorServerSocketWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/util/workingWithClient/ServerSocketWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/util/workingWithCommand/CommandManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/util/workingWithCommand/ServerCommandListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/AddIfMaxCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/CommandInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/CommandInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/CountGreaterThanTransferredStudentsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/CountGreaterThanTransferredStudentsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/ExecuteScriptCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/PrintFieldDescendingSemesterEnumCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/PrintFieldDescendingSemesterEnumCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/RemoveAnyByShouldBeExpelledCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/RemoveAnyByShouldBeExpelledCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/RemoveByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/RemoveFirstCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/RemoveFirstCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/managers/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/managers/CollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/managers/DateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/managers/DateConverter.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,9 +84,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="main/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -28,10 +100,10 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -43,9 +115,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2UhfdOb42Fo0WCquj34E20tEdOv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -54,40 +126,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/mavri/Documents/GitHub/Lab6/Lab6_sec_try/server/src/managers",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mavri/Documents/GitHub/Lab6/Lab6_sec_try/server/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="things" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\server\src" />
+      <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try" />
+      <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\client\src" />
       <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\server\src\managers" />
-      <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\server\src\things" />
-      <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\client\src\commands" />
+      <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\server\src\exceptions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\server\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="managers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Client" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="server" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,6 +193,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
@@ -113,7 +206,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1693396823289</updated>
-      <workItem from="1693396824301" duration="12874000" />
+      <workItem from="1693396824301" duration="22121000" />
+      <workItem from="1693761947073" duration="3687000" />
+      <workItem from="1693766612236" duration="3339000" />
+      <workItem from="1693771489343" duration="590000" />
     </task>
     <task id="LOCAL-00001" summary="started writing server">
       <option name="closed" value="true" />
@@ -123,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693733827808</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first_commit_new_repo">
+      <option name="closed" value="true" />
+      <created>1693735356003</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693735356003</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +246,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started writing server" />
-    <option name="LAST_COMMIT_MESSAGE" value="started writing server" />
+    <MESSAGE value="first_commit_new_repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="first_commit_new_repo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

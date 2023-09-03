@@ -3,7 +3,7 @@ package managers;
 import com.opencsv.CSVReader;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
-import things.*;
+import things.StudyGroup;
 
 import javax.naming.NoPermissionException;
 import java.io.BufferedInputStream;

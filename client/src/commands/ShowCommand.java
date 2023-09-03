@@ -1,9 +1,9 @@
 package commands;
 
-import java.util.Iterator;
-
 import managers.CollectionManager;
 import things.StudyGroup;
+
+import java.util.Iterator;
 
 public class ShowCommand implements CommandInterface{
     private final CollectionManager collectionManager;

@@ -4,30 +4,30 @@ import exceptions.NotEnoughArgs;
 import exceptions.WrongArgument;
 import managers.CollectionManager;
 import managers.IoManager;
+import things.StudyGroup;
 
 import java.io.IOException;
 
-public class RemoveByIdCommand implements CommandInterface {
+public class UpdateCommand implements CommandInterface {
     private final CollectionManager collectionManager;
+    private final IoManager ioManager;
 
-    public RemoveByIdCommand(CollectionManager collectionManager) {
+    public UpdateCommand(CollectionManager collectionManager) {
         this.collectionManager = collectionManager;
+        this.ioManager = new IoManager();
     }
+
+
     @Override
     public String getDescription() {
-        return " remove element by his id ";
+        return "обновить значение элемента коллекции, id которого равен заданному";
     }
 
     @Override
     public String getName() {
-        return "remove_by_id";
+        return "Update";
     }
 
-
-    /**
-     * Removes object from collection with specified id.
-     * @param args of object to be removed from collection.
-     */
     @Override
     public void execute(String[] args) throws IOException, NotEnoughArgs, WrongArgument {
         if(args.length < 2) throw new NotEnoughArgs("Command requires \"id\" argument");
@@ -36,13 +36,13 @@ public class RemoveByIdCommand implements CommandInterface {
             id = Integer.parseInt(args[1]);
         }
         catch (NumberFormatException e){
-            throw  new WrongArgument("Argument must be long integer number");
+            throw  new WrongArgument("Argument must be long integer number.");
         }
-        boolean result = collectionManager.removeByID(id);
-        if(result) System.out.println("Object removed successfully");
-        else System.out.println("No such element");
+
+        StudyGroup studyGroup = collectionManager.getById(id); // get object to update
+        if(studyGroup == null) throw new WrongArgument("No such element.");
+
+        studyGroup = ioManager.requestStudyGroup(collectionManager);
     }
 
-
 }
-
