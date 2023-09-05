@@ -3,7 +3,7 @@ package things;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvCustomBindByName;
 import com.opencsv.bean.CsvRecurse;
-import managers.DateConverter;
+import util.DateConverter;
 
 import java.time.ZonedDateTime;
 
@@ -24,7 +24,7 @@ public class StudyGroup implements Comparable<StudyGroup> {
     private ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
 
     @CsvBindByName(column = "STUDENTSCOUNT", required = true)
-    private long studentsCount; //Значение поля должно быть больше 0
+    private Long studentsCount; //Значение поля должно быть больше 0
     @CsvBindByName(column = "SHOULDBEEXPELLED", required = true)
     private Integer shouldBeExpelled; //Значение поля должно быть больше 0, Поле может быть null
     @CsvBindByName(column = "TRANSFERREDSTUDENTS", required = true)

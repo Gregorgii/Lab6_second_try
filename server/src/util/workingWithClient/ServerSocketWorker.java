@@ -1,9 +1,10 @@
 package util.workingWithClient;
 
-import common.util.DeSerializer;
-import common.util.Request;
-import common.util.Response;
-import common.util.Serializer;
+
+import util.DeSerializer;
+import util.Request;
+import util.Response;
+import util.Serializer;
 
 import java.io.IOException;
 import java.net.*;
