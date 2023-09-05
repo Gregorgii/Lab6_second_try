@@ -1,4 +1,6 @@
+import commands.*;
 import commands.clientCommands.AbstractClientCommand;
+import commands.clientCommands.AddCommand;
 import commands.serverCommands.AbstractServerCommand;
 import managers.CollectionManager;
 
@@ -18,7 +20,6 @@ public class AvailableCommands {
         AbstractClientCommand clearCommand = new ClearCommand(collectionManager);
         AbstractClientCommand removeHead = new RemoveHeadCommand(collectionManager);
         AbstractClientCommand removeLower = new RemoveLoverCommand(collectionManager);
-        AbstractClientCommand historyCommand = new HistoryCommand(CommandManager.getCommandHistory().getHistory());
         AbstractClientCommand removeAllByMinutesOfWaiting = new RemoveAllByMinutesOfWaitingCommand(collectionManager);
         AbstractClientCommand sumOfMinutesOfWaiting = new SumOfMinutesOfWaitingCommand(collectionManager);
         AbstractClientCommand countByImpactSpeed = new CountByImpactSpeedCommand(collectionManager);

@@ -1,6 +1,7 @@
 package commands;
 
 
+import commands.clientCommands.AddCommand;
 import exceptions.NotEnoughArgs;
 import exceptions.WrongArgument;
 import managers.CollectionManager;
