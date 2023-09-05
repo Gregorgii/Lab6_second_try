@@ -4,27 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="i see....">
-      <change afterPath="$PROJECT_DIR$/common/src/condition/Condition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/condition/StudyGroupGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/things/StudyGroupBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/util/CheckAns.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/util/DeSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/util/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/util/RequestBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/util/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/util/ResponseBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/util/Serializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/things/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/things/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/things/Semester.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/Semester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/things/StudyGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/StudyGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/things/class-use/Coordinates.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/things/class-use/Person.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/things/class-use/Semester.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/things/class-use/StudyGroup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/util/workingWithClient/ServerSocketWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/util/workingWithClient/ServerSocketWorker.java" afterDir="false" />
+    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="wtf i refactor stdgoup builder!">
+      <change beforePath="$PROJECT_DIR$/server/src/exceptions/NotEnoughArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/exceptions/NotEnoughArgs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/exceptions/WrongArgument.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/exceptions/WrongArgument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/exceptions/WrongField.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/exceptions/WrongField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +82,8 @@
       <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\server\src\exceptions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common/src" />
+      <recent name="$PROJECT_DIR$/common" />
       <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\server\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -165,7 +150,7 @@
       <workItem from="1693766612236" duration="3339000" />
       <workItem from="1693771489343" duration="1166000" />
       <workItem from="1693899979515" duration="1837000" />
-      <workItem from="1693901896730" duration="6240000" />
+      <workItem from="1693901896730" duration="6979000" />
     </task>
     <task id="LOCAL-00001" summary="started writing server">
       <option name="closed" value="true" />
@@ -191,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693772169182</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="wtf i refactor stdgoup builder!">
+      <created>1693910341999</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693910341999</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +205,8 @@
     <MESSAGE value="started writing server" />
     <MESSAGE value="first_commit_new_repo" />
     <MESSAGE value="i see...." />
-    <option name="LAST_COMMIT_MESSAGE" value="i see...." />
+    <MESSAGE value="wtf i refactor stdgoup builder!" />
+    <option name="LAST_COMMIT_MESSAGE" value="wtf i refactor stdgoup builder!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
