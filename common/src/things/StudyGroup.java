@@ -4,7 +4,6 @@ import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvCustomBindByName;
 import com.opencsv.bean.CsvRecurse;
 import condition.StudyGroupGenerator;
-import util.DateConverter;
 
 import java.time.ZonedDateTime;
 
@@ -15,7 +14,6 @@ import java.time.ZonedDateTime;
 
 public class StudyGroup implements Comparable<StudyGroup> {
     private static final StudyGroupGenerator STUDY_GROUP_GENERATOR = new StudyGroupGenerator();
-
     @CsvBindByName(column = "IDOFGROUP", required = true)
     private Integer id;//Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     @CsvBindByName(column = "NAMEOFGROUP", required = true)
@@ -47,9 +45,7 @@ public class StudyGroup implements Comparable<StudyGroup> {
     }
 
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public void setId(Integer id) {this.id = id;}
 
     public void setCreationDate(ZonedDateTime creationDate) {
         this.creationDate = creationDate;

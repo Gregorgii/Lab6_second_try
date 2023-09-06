@@ -1,219 +1,205 @@
 package managers;
 
-import com.opencsv.CSVReader;
-import com.opencsv.bean.CsvToBean;
-import com.opencsv.bean.CsvToBeanBuilder;
 import things.StudyGroup;
+import util.workingWithCommand.FileManager;
 
-import javax.naming.NoPermissionException;
-import java.io.BufferedInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.file.Files;
-import java.nio.file.InvalidPathException;
-import java.nio.file.Path;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 public class CollectionManager {
-    private final ArrayList<StudyGroup> groupCollection;
-    private final Path defaultPath;
+
+    private static Integer idCounter = 1;
     private final ZonedDateTime creationDate;
+    private LinkedList<StudyGroup> groupCollection = new LinkedList<>();
+    private final FileManager fileManager;
 
-    public CollectionManager(Path filePath) throws IOException {
 
-        defaultPath = filePath;
-        groupCollection = new ArrayList<>();
+    public CollectionManager(FileManager fileManager) throws FileNotFoundException {
+        this.fileManager = fileManager;
         this.creationDate = ZonedDateTime.now();
     }
+
+    public LinkedList<StudyGroup> getGroupCollection() {return groupCollection; }
+
+    public FileManager getFileManager() {return fileManager; }
 
     /**
      * Returns s default file path specified in class.
      * @return path
      */
-    public Path getPath(){
-        return defaultPath;
-    }
 
 
-    public String getInfo() {
+
+    public String info() {
         String result = "";
         result += "Information about collection:\n";
-        result += "Created at " + this.creationDate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")) + '\n';
-        result += "Collection type is " + this.groupCollection.getClass().getName() + '\n';
-        result += "Amount of items stored in - " + this.groupCollection.size() + '\n';
+        result += "Created at " + creationDate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")) + '\n';
+        result += "Collection type is " + groupCollection.getClass().getName() + '\n';
+        result += "Amount of items stored in - " + groupCollection.size() + '\n';
         return result;
     }
 
-    public Iterator<StudyGroup> getIterator(){
-        return groupCollection.iterator();
-    }
-
-    public ArrayList<StudyGroup> getCollection(){
-        return groupCollection;
-    }
-
-
-
-    /**
-     * Get collection size
-     *
-     * @return number of elements stored in collection
-     */
-    public int getSize(){
-        return groupCollection.size();
-    }
-
-    /**
-     * @param id ID of the group.
-     * @return A group by his ID or null if group isn't found.
-     */
-    public StudyGroup getById(Integer id) {
-        for (StudyGroup studyGroup: groupCollection) {
-            if (Objects.equals(studyGroup.getId(), id)) return studyGroup;
+    public String show() {
+        StringBuilder string = new StringBuilder();
+        if (groupCollection.isEmpty()) {
+            throw new IllegalArgumentException("Collection is empty");
+        } else {
+            groupCollection.forEach(sg -> string.append(sg.toString()).append("\n"));
         }
-        return null;
+        return string.toString();
     }
 
-    /**
-     * Adds a new group to collection.
-     * @param studyGroup A group to add.
-     */
-    public void addToCollection(StudyGroup studyGroup) {
-        groupCollection.add(studyGroup);
+    public String add(StudyGroup studyGroup) {
+            studyGroup.setId(idCounter++);
+            studyGroup.setCreationDate(ZonedDateTime.now());
+            groupCollection.add(studyGroup);
+            groupCollection = groupCollection
+                    .stream()
+                    .sorted()
+                    .collect(Collectors.toCollection(LinkedList::new));
+            return "Study group added successfully";
     }
 
-    /**
-     * Removes object from collection with specified id.
-     * @param id id of object to be removed from collection.
-     * @return true if object was removed successfully, false if object with spec. id does now exist.
-     */
-    public boolean removeByID(int id){
-        for(int index = 0; index < groupCollection.size(); index++){
-            if(groupCollection.get(index).getId() == id){
-                this.removeByIndex(index);
-                return true;
+    public String update(Integer id, StudyGroup element) {
+        if (groupCollection.isEmpty()) {
+            throw new IllegalArgumentException("Collection is empty");
+        } else {
+            boolean found = false;
+            List<StudyGroup> filteredList = groupCollection.stream().filter(sg -> sg.getId().equals(id)).toList();
+            if (!filteredList.isEmpty()) {
+                element.setId(id);
+                groupCollection.remove(filteredList.get(0));
+                groupCollection.add(element);
+                found = true;
+            }
+            groupCollection = groupCollection
+                    .stream()
+                    .sorted()
+                    .collect(Collectors.toCollection(LinkedList::new));
+            if (!found) {
+                throw new IllegalArgumentException("No such element with id = " + id);
+            } else {
+                return "Element with id  " + id + " updated successfully";
             }
         }
-        return false;
     }
 
-    /**
-     * Get element with min. value
-     * @return dragon object with min. value
-     */
-    public StudyGroup getMax(){
-        if(groupCollection.size() > 0) return Collections.max(groupCollection);
-        return null;
-    }
-
-
-    /**
-     * Removes element with specified index
-     * @param index object to be removed index
-     * @throws IndexOutOfBoundsException when elements with such index does not exist
-     */
-    public void removeByIndex(int index) throws IndexOutOfBoundsException{
-        groupCollection.remove(index);
-    }
-
-    /**
-     * Remove group greater than the selected one.
-     * @param groupToCompare A group to compare with.
-     */
-    public void removeGreater(StudyGroup groupToCompare) throws IOException {
-        int counter = 0;
-
-        for (StudyGroup group : groupCollection){
-            if(group.compareTo(groupToCompare) > 0) {
-                removeByID(group.getId());
-                counter += 1;
+    public String removeById(Integer id) {
+        if (groupCollection.isEmpty()) {
+            throw new IllegalArgumentException("Collection is empty");
+        } else {
+            boolean found = groupCollection.removeIf(sg -> sg.getId().equals(id));
+            if (!found) {
+                throw new IllegalArgumentException("No such element with id = " + id);
+            } else {
+                return "Element with id " + id + " deleted successfully";
             }
         }
-        System.out.println(counter + " elements was removed");
+    }
+
+    public String clear() {
+        if (groupCollection.isEmpty()) {
+            return "Collection is empty already";
+        } else {
+            groupCollection.clear();
+            return "Collection cleared successfully";
+        }
+
     }
 
 
-    /**
-     * Get stream
-     * @return stream
-     */
-    public Stream<StudyGroup> getStream(){
-        return groupCollection.stream();
+
+    public String removeFirst() {
+        if (groupCollection.isEmpty()) {
+            throw new IllegalArgumentException("Collection is empty");
+        } else {
+            return "First element: " + groupCollection.poll() + "\n deleted successfully";
+        }
     }
 
-    /**
-     * Generates next ID. It will be (the bigger one + 1).
-     * @return Next ID.
-     */
-    public Integer generateNextId() {
-        if (groupCollection.isEmpty()) return 1;
-        return (int) (groupCollection.get(groupCollection.size() - 1).getId() + 1);
+    public String removeGreater(StudyGroup studyGroup) {
+        if (groupCollection.isEmpty()) {
+            throw new IllegalArgumentException("Collection is empty");
+        } else {
+            boolean found = groupCollection.removeIf(sg -> sg.compareTo(studyGroup) > 0);
+            if (!found) {
+                throw new IllegalArgumentException("Elements greater than this not found");
+            } else {
+                return "Elements greater than this deleted successfully";
+            }
+        }
     }
 
-
-    @Override
-    public String toString() {
-        if (groupCollection.isEmpty()) return "Коллекция пуста!";
-
-        StringBuilder info = new StringBuilder();
-        for (StudyGroup studyGroup : groupCollection) {
-            info.append(studyGroup);
-            if (studyGroup != groupCollection.get(groupCollection.size()-1)) info.append("\n\n");
+    public String removeAnyByShouldBeExpelled(Integer shouldBeExpelled ) {
+        if (groupCollection.isEmpty()) {
+            throw new IllegalArgumentException("Collection is empty");
+        } else {
+            boolean found = groupCollection.removeIf(sg -> Objects.equals(sg.getShouldBeExpelled(), shouldBeExpelled));
+            if (!found) {
+                throw new IllegalArgumentException("No such elements with should be expelled = " + shouldBeExpelled);
+            } else {
+                return "Elements with value of should be expelled = " + shouldBeExpelled + " removed successfully";
+            }
         }
-        return info.toString();
     }
 
-    public void fillCollectionFromFile(){
-        fillCollectionFromFile(defaultPath);
+    public String countGreaterThanTransferredStudents(Integer countOfTransferredStudents){
+        if (groupCollection.isEmpty()){
+            throw new IllegalArgumentException("Collection is empty");
+        } else{
+            int count = (int) groupCollection
+                    .stream()
+                    .filter(sg -> Objects.equals(sg.getTransferredStudents(), countOfTransferredStudents)).count();
+            if (count == 0){
+                throw new IllegalArgumentException("No such elements with Transferred Students = " + countOfTransferredStudents);
+            } else {
+                return "Count of elements with value of Transferred students = " + count;
+            }
+        }
     }
 
-    /**
-     * Fill collection from file
-     * @param path path to .csv file to load from
-     */
-    public void fillCollectionFromFile(Path path) {
+    public String addIfMax(StudyGroup studyGroup){
+        if(groupCollection.isEmpty()){
+            studyGroup.setId(idCounter++);
+            studyGroup.setCreationDate(ZonedDateTime.now());
+            groupCollection.add(studyGroup);
+            groupCollection = groupCollection
+                    .stream()
+                    .sorted()
+                    .collect(Collectors.toCollection(LinkedList::new));
+            return "Study group added successfully";
+        } else {
+            List<StudyGroup> filteredList = groupCollection.stream().filter(sg -> sg.getStudentsCount() > studyGroup.getStudentsCount()).toList();
+            if (filteredList.isEmpty()){
+                studyGroup.setId(idCounter++);
+                studyGroup.setCreationDate(ZonedDateTime.now());
+                groupCollection.add(studyGroup);
+                groupCollection = groupCollection
+                        .stream()
+                        .sorted()
+                        .collect(Collectors.toCollection(LinkedList::new));
+                return "Study group added successfully";
+            } else {
+                throw new IllegalArgumentException("No elements less than the input");
+            }
 
+        }
+    }
 
-        // check if file exist
-        try{
-            if(!Files.exists(path)) throw new FileNotFoundException("File " + path + " not found");
-            if(!Files.isReadable(path)) throw new NoPermissionException("Cannot read file.");
-            if(!Files.isWritable(path)) throw new NoPermissionException("Cannot write to file.");
+    public String printFieldDescendingSemesterEnum(){
+        StringBuilder string = new StringBuilder();
+        if (groupCollection.isEmpty()){
+            throw new IllegalArgumentException("Collection is empty");
+        } else {
+            List<StudyGroup> sortedList = groupCollection.stream().sorted().toList();
+            sortedList.forEach(studyGroup -> string.append(studyGroup.getSemesterEnum()).append("\n"));
         }
-        catch (InvalidPathException e){
-            System.out.println("Argument must be a correct file path. Data not loaded.");
-            return;
-        }
-        catch (FileNotFoundException e){
-            System.out.println("File " + path + " not found. Data not loaded."); // file does not exist
-            return;
-        }
-        catch (NoPermissionException e){
-            System.out.print("No enough permissions to " + path + " - " + e.getMessage() + " Data not loaded."); // permissions deny
-            return;
-        }
-
-        try (BufferedInputStream inputStream = new BufferedInputStream(Files.newInputStream(path))){
-
-            CSVReader reader = new CSVReader(new InputStreamReader(inputStream));
-            CsvToBean<StudyGroup> csv = new CsvToBeanBuilder<StudyGroup>(reader).withType(StudyGroup.class).build();
-
-            groupCollection.addAll(csv.parse());
-
-            System.out.println(groupCollection.size() + " item(s) loaded from file " + path);
-        }
-        catch (RuntimeException e){
-            System.out.println(e.getMessage());
-        } catch (Throwable e){
-            System.out.println("An error occurred while reading file. Data not loaded.");
-        }
+        return string.toString();
     }
 
 

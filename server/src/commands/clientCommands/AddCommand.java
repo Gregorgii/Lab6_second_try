@@ -1,9 +1,7 @@
 package commands.clientCommands;
 
 import com.sun.net.httpserver.Request;
-import commands.CommandInterface;
 import managers.CollectionManager;
-import managers.IoManager;
 
 
 public class AddCommand extends AbstractClientCommand {

@@ -11,6 +11,7 @@ public class Coordinates {
     private Double x; //Значение поля должно быть больше -771, Поле не может быть null
     @CsvBindByName(column = "COORDINATESY", required = true)
     private Float y; //Поле не может быть null
+    public static final int X_MIN = -771;
 
     public Coordinates(Double x, Float y){
         this.x = x;

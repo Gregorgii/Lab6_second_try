@@ -6,6 +6,10 @@ import managers.CollectionManager;
 
 import java.util.HashMap;
 
+//TODO
+// AbstractServerCommand
+//  AvailableCommands
+
 public class AvailableCommands {
     public static final HashMap<String, AbstractClientCommand> CLIENT_AVAILABLE_COMMANDS = new HashMap<>();
     public static final HashMap<String, AbstractServerCommand> SERVER_AVAILABLE_COMMANDS = new HashMap<>();

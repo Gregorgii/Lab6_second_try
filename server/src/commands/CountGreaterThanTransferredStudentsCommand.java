@@ -1,7 +1,6 @@
 package commands;
 
 import managers.CollectionManager;
-import managers.IoManager;
 import things.StudyGroup;
 
 import java.util.Iterator;

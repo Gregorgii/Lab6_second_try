@@ -3,7 +3,6 @@ package commands;
 import exceptions.NotEnoughArgs;
 import exceptions.WrongArgument;
 import managers.CollectionManager;
-import managers.IoManager;
 import things.StudyGroup;
 
 import java.io.IOException;
