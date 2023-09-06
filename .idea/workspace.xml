@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="wtf i refactor stdgoup builder!">
-      <change beforePath="$PROJECT_DIR$/server/src/exceptions/NotEnoughArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/exceptions/NotEnoughArgs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/exceptions/WrongArgument.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/exceptions/WrongArgument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/exceptions/WrongField.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/exceptions/WrongField.java" afterDir="false" />
+    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="i see....">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/AvailableCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/AvailableCommands.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +35,10 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+  }
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -47,6 +50,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2UhfdOb42Fo0WCquj34E20tEdOv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,21 +61,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mavri/Documents/GitHub/Lab6/Lab6_sec_try/server/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="things" />
@@ -82,8 +98,6 @@
       <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\server\src\exceptions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/common/src" />
-      <recent name="$PROJECT_DIR$/common" />
       <recent name="C:\Users\mavri\Documents\GitHub\Lab6\Lab6_sec_try\server\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -112,24 +126,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="NimRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="nim.task.build.to.cache" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -149,8 +145,6 @@
       <workItem from="1693761947073" duration="3687000" />
       <workItem from="1693766612236" duration="3339000" />
       <workItem from="1693771489343" duration="1166000" />
-      <workItem from="1693899979515" duration="1837000" />
-      <workItem from="1693901896730" duration="6979000" />
     </task>
     <task id="LOCAL-00001" summary="started writing server">
       <option name="closed" value="true" />
@@ -176,14 +170,7 @@
       <option name="project" value="LOCAL" />
       <updated>1693772169182</updated>
     </task>
-    <task id="LOCAL-00004" summary="wtf i refactor stdgoup builder!">
-      <created>1693910341999</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1693910341999</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,14 +186,12 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started writing server" />
     <MESSAGE value="first_commit_new_repo" />
     <MESSAGE value="i see...." />
-    <MESSAGE value="wtf i refactor stdgoup builder!" />
-    <option name="LAST_COMMIT_MESSAGE" value="wtf i refactor stdgoup builder!" />
+    <option name="LAST_COMMIT_MESSAGE" value="i see...." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

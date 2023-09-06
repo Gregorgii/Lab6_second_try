@@ -1,9 +1,7 @@
 package things;
 
 import com.opencsv.bean.CsvBindByName;
-import com.opencsv.bean.CsvCustomBindByName;
 import com.opencsv.bean.CsvDate;
-import exceptions.WrongField;
 
 import java.time.LocalDate;
 
@@ -18,7 +16,7 @@ public class Person {
     @CsvDate("yyyy-MM-dd")
     private LocalDate birthday; //Поле не может быть null
     @CsvBindByName(column = "WEIGHT", required = true)
-    private long weight; //Значение поля должно быть больше 0
+    private Long weight; //Значение поля должно быть больше 0
     @CsvBindByName(column = "PASSPORTID", required = true)
     private String passportID; //Строка не может быть пустой, Поле не может быть null
 
@@ -68,39 +66,10 @@ public class Person {
         return passportID;
     }
 
-
-    /**
-     * Set Person name.
-     * @param name name to set.
-     * @throws WrongField when value is null or empty string.
-     */
-    public void setName(String name) throws WrongField {
-        if(name == null) throw new WrongField("Name can nor be null");
-        if(name.length() == 0) throw new WrongField("String can not be empty");
-        this.name = name;
+    @Override
+    public String toString(){
+        return " Admin with name " + name + " and with birthday " + birthday + "\n"
+                + "and passport ID " + passportID + "\n";
     }
-
-    /**
-     * Set Person passport ID.
-     * @param passportID value to set.
-     * @throws WrongField when value is null or length greater than 28 or less than 8.
-     */
-    public void setPassportID(String passportID) throws WrongField{
-        if(passportID == null) throw new WrongField("PassportID can nor be null");
-        if( passportID.length() > 21) throw new WrongField("PassportID length shouldn't be greater than 21");
-        this.passportID = passportID;
-    }
-
-    public void setWeight(Long weight) throws WrongField{
-        if(weight == 0) throw new WrongField("Weight cant be zero");
-        this.weight = weight;
-    }
-
-    public void setBirthday(LocalDate birthday) throws WrongField {
-        if(birthday == null) throw new WrongField("Birthday cant be null");
-        this.birthday = birthday;
-    }
-
-
     
 }

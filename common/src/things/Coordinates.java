@@ -12,7 +12,9 @@ public class Coordinates {
     @CsvBindByName(column = "COORDINATESY", required = true)
     private Float y; //Поле не может быть null
 
-    public Coordinates(){
+    public Coordinates(Double x, Float y){
+        this.x = x;
+        this.y = y;
     }
 
     /**

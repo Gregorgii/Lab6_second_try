@@ -1,8 +1,8 @@
 package condition;
 
-import things.Person;
 import things.Semester;
 
+import java.time.LocalDate;
 import java.util.ArrayDeque;
 import java.util.Scanner;
 
@@ -12,8 +12,12 @@ public abstract class Condition {
     private Float y;
     private Long studentsCount;
     private Integer shouldBeExpelled;
+    private Integer transferredStudents;
     private Semester semesterEnum;
-    private Person groupAdmin;
+    private String personName;
+    private LocalDate birthday;
+    private Long weight;
+    private String passportID;
     private Scanner scanner;
     private ArrayDeque<String> errs = new ArrayDeque<>();
 
@@ -38,9 +42,17 @@ public abstract class Condition {
 
     public Integer getShouldBeExpelled() {return shouldBeExpelled; }
 
+    public Integer getTransferredStudents() {return transferredStudents; }
+
     public Semester getSemesterEnum() {return semesterEnum; }
 
-    public Person getGroupAdmin() {return groupAdmin; }
+    public String getPersonName() {return personName; }
+
+    public LocalDate getBirthday() {return birthday; }
+
+    public Long getWeight() {return weight; }
+
+    public String getPassportID() {return passportID; }
 
     public void setName(String name) {this.name = name; }
 
@@ -52,9 +64,17 @@ public abstract class Condition {
 
     public void setShouldBeExpelled(Integer shouldBeExpelled) {this.shouldBeExpelled = shouldBeExpelled; }
 
+    public void setTransferredStudents(Integer transferredStudents) {this.transferredStudents = transferredStudents; }
+
     public void setSemesterEnum(Semester semesterEnum) {this.semesterEnum = semesterEnum; }
 
-    public void setGroupAdmin(Person groupAdmin) {this.groupAdmin = groupAdmin; }
+    public void setPersonName(String personName) {this.personName = personName; }
+
+    public void setBirthday(LocalDate birthday) {this.birthday = birthday; }
+
+    public void setWeight(Long weight) {this.weight = weight; }
+
+    public void setPassportID(String passportID) {this.passportID = passportID; }
 
     public Scanner getScanner() {return scanner; }
 

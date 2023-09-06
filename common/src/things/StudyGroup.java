@@ -3,6 +3,7 @@ package things;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvCustomBindByName;
 import com.opencsv.bean.CsvRecurse;
+import condition.StudyGroupGenerator;
 import util.DateConverter;
 
 import java.time.ZonedDateTime;
@@ -13,6 +14,7 @@ import java.time.ZonedDateTime;
 */
 
 public class StudyGroup implements Comparable<StudyGroup> {
+    private static final StudyGroupGenerator STUDY_GROUP_GENERATOR = new StudyGroupGenerator();
 
     @CsvBindByName(column = "IDOFGROUP", required = true)
     private Integer id;//Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
@@ -34,30 +36,23 @@ public class StudyGroup implements Comparable<StudyGroup> {
     @CsvRecurse
     private Person groupAdmin; //Поле не может быть null
 
-    /**
-     * @param id
-     * @param name
-     * @param coordinates
-     * @param creationDate
-     * @param studentsCount
-     * @param shouldBeExpelled
-     * @param transferredStudents
-     * @param semesterEnum
-     * @param groupAdmin
-     */
-    public StudyGroup(Integer id, String name, Coordinates coordinates, ZonedDateTime creationDate, Long studentsCount, Integer shouldBeExpelled, Integer transferredStudents, Semester semesterEnum, Person groupAdmin){
-        this.id = id;
-        this.name = name;
-        this.coordinates = coordinates;
-        this.creationDate = creationDate;
-        this.studentsCount = studentsCount;
-        this.shouldBeExpelled = shouldBeExpelled;
-        this.transferredStudents = transferredStudents;
-        this.semesterEnum = semesterEnum;
-        this.groupAdmin = groupAdmin;
+    public StudyGroup(StudyGroupBuilder studyGroupBuilder){
+        this.name = studyGroupBuilder.getName();
+        this.coordinates = studyGroupBuilder.getCoordinates();
+        this.studentsCount = studyGroupBuilder.getStudentsCount();
+        this.shouldBeExpelled = studyGroupBuilder.getShouldBeExpelled();
+        this.transferredStudents = studyGroupBuilder.getTransferredStudents();
+        this.semesterEnum = studyGroupBuilder.getSemesterEnum();
+        this.groupAdmin = studyGroupBuilder.getGroupAdmin();
     }
 
-    public StudyGroup(){
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setCreationDate(ZonedDateTime creationDate) {
+        this.creationDate = creationDate;
     }
 
     /**
@@ -124,10 +119,19 @@ public class StudyGroup implements Comparable<StudyGroup> {
     public Person getGroupAdmin(){
         return groupAdmin;
     }
+    public static StudyGroupGenerator getStudyGroupGenerator(){return STUDY_GROUP_GENERATOR; }
 
 
     @Override
     public int compareTo(StudyGroup o) {
-        return 0;
+        return name.compareTo(o.getName());
+    }
+
+    @Override
+    public String toString(){
+        return "Name of group " + name + " with id: " + id + "\n"
+                + "with count of students " + studentsCount +" and should be expelled " + shouldBeExpelled + "\n"
+                + "with transferred students " + transferredStudents + " and semester " + semesterEnum + "\n"
+                + "and with group admin " + groupAdmin.toString() + "\n";
     }
 }
