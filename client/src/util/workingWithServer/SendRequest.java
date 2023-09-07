@@ -21,7 +21,7 @@ public final class SendRequest {
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         } catch (IOException e) {
-            System.out.println("Something went wrong at sending request");
+            System.out.println("Произошла ошибка при отправке запроса, повторите попытку");
         }
         return false;
     }

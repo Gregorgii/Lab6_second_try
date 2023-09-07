@@ -1,7 +1,6 @@
 package things;
 
-import com.opencsv.bean.CsvBindByName;
-import com.opencsv.bean.CsvRecurse;
+
 import condition.StudyGroupGenerator;
 
 import java.time.ZonedDateTime;
@@ -13,24 +12,24 @@ import java.time.ZonedDateTime;
 
 public class StudyGroup implements Comparable<StudyGroup> {
     private static final StudyGroupGenerator STUDY_GROUP_GENERATOR = new StudyGroupGenerator();
-    @CsvBindByName(column = "IDOFGROUP", required = true)
+
     private Integer id;//Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
-    @CsvBindByName(column = "NAMEOFGROUP", required = true)
+
     private String name; //Поле не может быть null, Строка не может быть пустой
-    @CsvRecurse
+
     private Coordinates coordinates; //Поле не может быть null
 
     private ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
 
-    @CsvBindByName(column = "STUDENTSCOUNT", required = true)
+
     private Long studentsCount; //Значение поля должно быть больше 0
-    @CsvBindByName(column = "SHOULDBEEXPELLED", required = true)
+
     private Integer shouldBeExpelled; //Значение поля должно быть больше 0, Поле может быть null
-    @CsvBindByName(column = "TRANSFERREDSTUDENTS", required = true)
+
     private Integer transferredStudents; //Значение поля должно быть больше 0, Поле может быть null
-    @CsvBindByName(column = "SEMESTER", required = false)
+
     private Semester semesterEnum; //Поле не может быть null
-    @CsvRecurse
+
     private Person groupAdmin; //Поле не может быть null
 
     public StudyGroup(StudyGroupBuilder studyGroupBuilder){

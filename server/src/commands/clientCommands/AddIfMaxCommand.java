@@ -10,7 +10,7 @@ public class AddIfMaxCommand extends AbstractClientCommand{
 
     public AddIfMaxCommand(CollectionManager collectionManager){
         super(new AbstractCommandBuilder()
-                .withName("add if max in collection")
+                .withName("add_if_max_in_collection")
                 .withQuantityOfArgs(0)
                 .withDescription("add element in collection of count of students greater than groups in collection")
                 .withDescriptionOfArgs("study group to compare")

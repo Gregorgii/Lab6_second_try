@@ -10,7 +10,7 @@ public class RemoveByIdCommand extends AbstractClientCommand{
 
     public RemoveByIdCommand(CollectionManager collectionManager){
         super(new AbstractCommandBuilder()
-                .withName("remove by id ")
+                .withName("remove_by_id")
                 .withQuantityOfArgs(1)
                 .withDescription("remove element by his id")
                 .withDescriptionOfArgs("need a Integer greater than 0")

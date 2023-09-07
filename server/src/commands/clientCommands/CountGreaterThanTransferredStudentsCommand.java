@@ -9,7 +9,7 @@ public class CountGreaterThanTransferredStudentsCommand extends AbstractClientCo
 
     public CountGreaterThanTransferredStudentsCommand(CollectionManager collectionManager){
         super(new AbstractCommandBuilder()
-                .withName("count greater than transferred students")
+                .withName("count_greater_than_transferred_students")
                 .withQuantityOfArgs(1)
                 .withDescription("count greater than written count of transferred students")
                 .withDescriptionOfArgs("count for compare, Integer")

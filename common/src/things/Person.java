@@ -1,8 +1,5 @@
 package things;
 
-import com.opencsv.bean.CsvBindByName;
-import com.opencsv.bean.CsvDate;
-
 import java.time.LocalDate;
 
 /**
@@ -10,14 +7,13 @@ import java.time.LocalDate;
 */
 
 public class Person {
-    @CsvBindByName(column = "NAME", required = true)
+
     private String name; //Поле не может быть null, Строка не может быть пустой
-    @CsvBindByName(column = "BIRTHDAY", required = true)
-    @CsvDate("yyyy-MM-dd")
+
     private LocalDate birthday; //Поле не может быть null
-    @CsvBindByName(column = "WEIGHT", required = true)
+
     private Long weight; //Значение поля должно быть больше 0
-    @CsvBindByName(column = "PASSPORTID", required = true)
+
     private String passportID; //Строка не может быть пустой, Поле не может быть null
 
     /**

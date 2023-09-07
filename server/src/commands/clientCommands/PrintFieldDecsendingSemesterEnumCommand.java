@@ -10,7 +10,7 @@ public class PrintFieldDecsendingSemesterEnumCommand extends AbstractClientComma
 
     public PrintFieldDecsendingSemesterEnumCommand(CollectionManager collectionManager) {
         super(new AbstractCommandBuilder()
-                .withName("print field descending semester enum")
+                .withName("print_field_descending_semester_enum")
                 .withQuantityOfArgs(0)
                 .withDescription("print all fields with info 'bout semester in descending")
                 .withGeneratesStudyGroup(false));

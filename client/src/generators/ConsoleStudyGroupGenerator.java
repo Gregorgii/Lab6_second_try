@@ -23,7 +23,15 @@ public class ConsoleStudyGroupGenerator extends Condition {
         setValue("Set count of transferred students in the group", this::setTransferredStudents);
         setValue("Set count of students who should be expelled", this::setShouldBeExpelled);
         setValue("Set semester enum. Choose from " + Semester.values(), this::setSemesterEnum);
-        setValue("Set group admin ", this::setGroupAdmin);
+        setValue("Set group admin ", this::generateGroupAdminFields);
+
+    }
+
+    public void generateGroupAdminFields() {
+        setValue("Set name of admin", this::setName);
+        setValue("Set birthday in format yyyy-MM-dd", this::setBirthday);
+        setValue("Set weight", this::setWeight);
+        setValue("Set passport id", this::setPassportId);
 
     }
 
@@ -101,20 +109,26 @@ public class ConsoleStudyGroupGenerator extends Condition {
                     .getValue());
         }
 
-    public void setGroupAdmin() throws IllegalArgumentException, DateTimeParseException {
+    public void setPersonName() throws IllegalArgumentException {
         super.setPersonName(new Validator<String>(super.getScanner())
                 .withCheckingNull(false)
                 .getValue());
+    }
+    public void setBirthday() throws IllegalArgumentException, DateTimeParseException {
         super.setBirthday(new Validator<LocalDate>(super.getScanner())
                 .withCheckingNull(false)
                 .withCheckingFunction(LocalDate::parse, "Birthday must be local date with format 'yyyy-MM-dd'")
                 .getValue());
+    }
+    public void setWeight() throws IllegalArgumentException {
         super.setWeight(new Validator<Long>(super.getScanner())
                 .withCheckingNull(true)
                 .withCheckingFunction(Long::parseLong, "Weight must be Long or null")
                 .withCheckingPredicate(arg -> (Long) arg > 0,
                         "Value of weight must be greater than 0")
                 .getValue());
+    }
+    public void setPassportId() throws IllegalArgumentException{
         super.setPassportID(new Validator<String>(super.getScanner())
                 .withCheckingNull(false)
                 .getValue());

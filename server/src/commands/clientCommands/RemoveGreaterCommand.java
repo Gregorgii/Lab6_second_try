@@ -10,7 +10,7 @@ public class RemoveGreaterCommand extends AbstractClientCommand{
 
     public RemoveGreaterCommand(CollectionManager collectionManager){
         super(new AbstractCommandBuilder()
-                .withName("remove greater")
+                .withName("remove_greater")
                 .withQuantityOfArgs(0)
                 .withDescription("remove all elements greater than input")
                 .withDescriptionOfArgs("study group to compare")

@@ -1,17 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="client:jar" />
+      <artifact name="server:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="is it final?">
-      <change afterPath="$PROJECT_DIR$/server/src/util/ConsoleThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/util/RequestThread.java" afterDir="false" />
+    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="work program is somewhere around, it smells like napalm">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/client_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/generators/ConsoleStudyGroupGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/generators/ConsoleStudyGroupGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/generators/ScriptStudyGroupGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/generators/ScriptStudyGroupGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/util/ServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/util/workingWithServer/ReceiveResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/ReceiveResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/util/workingWithServer/RequestCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/RequestCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/util/workingWithServer/SendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/SendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/exceptions/NotEnoughArgs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/exceptions/WrongArgument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/exceptions/WrongField.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/things/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/things/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/things/StudyGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/StudyGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/util/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/util/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/AddIfMaxCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/CountGreaterThanTransferredStudentsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/CountGreaterThanTransferredStudentsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/PrintFieldDecsendingSemesterEnumCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/PrintFieldDecsendingSemesterEnumCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveAnyByShouldBeExpelledCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveAnyByShouldBeExpelledCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveFirstCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveFirstCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/util/workingWithCommand/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/util/workingWithCommand/CommandManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,31 +89,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mavri/Documents/GitHub/Lab6/Lab6_sec_try/server/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/mavri/Documents/GitHub/Lab6/Lab6_sec_try/server/src/META-INF/MANIFEST.MF",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="things" />
@@ -109,7 +132,7 @@
       <recent name="managers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Client" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="client" />
@@ -120,6 +143,13 @@
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="server" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,6 +172,7 @@
       <list>
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
@@ -159,7 +190,7 @@
       <workItem from="1693766612236" duration="3339000" />
       <workItem from="1693771489343" duration="1166000" />
       <workItem from="1693985683236" duration="14254000" />
-      <workItem from="1694028263656" duration="25638000" />
+      <workItem from="1694028263656" duration="30916000" />
     </task>
     <task id="LOCAL-00001" summary="started writing server">
       <option name="closed" value="true" />
@@ -225,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694102379229</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="work program is somewhere around, it smells like napalm">
+      <option name="closed" value="true" />
+      <created>1694103984334</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1694103984334</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +290,8 @@
     <MESSAGE value="goddamn, i did a lot of. it's not too far" />
     <MESSAGE value="hell yeah, last commits" />
     <MESSAGE value="is it final?" />
-    <option name="LAST_COMMIT_MESSAGE" value="is it final?" />
+    <MESSAGE value="work program is somewhere around, it smells like napalm" />
+    <option name="LAST_COMMIT_MESSAGE" value="work program is somewhere around, it smells like napalm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

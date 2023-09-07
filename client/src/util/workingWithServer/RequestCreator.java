@@ -27,6 +27,7 @@ public class RequestCreator {
         } else {
             throw new IllegalArgumentException("Ur command isn't real. Print help");
         }
+        System.out.println(request);
         return request;
     }
 

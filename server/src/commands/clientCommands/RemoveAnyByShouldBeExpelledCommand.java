@@ -9,7 +9,7 @@ public class RemoveAnyByShouldBeExpelledCommand extends AbstractClientCommand{
 
     public RemoveAnyByShouldBeExpelledCommand(CollectionManager collectionManager){
         super(new AbstractCommandBuilder()
-                .withName("remove any by should be expelled")
+                .withName("remove_any_by_should_be_expelled")
                 .withQuantityOfArgs(1)
                 .withDescription("remove any elements if field should be expelled equals inputted")
                 .withDescriptionOfArgs("Integer should be expelled to compare")

@@ -10,7 +10,7 @@ public class RemoveFirstCommand extends AbstractClientCommand{
 
     public RemoveFirstCommand(CollectionManager collectionManager){
         super(new AbstractCommandBuilder()
-                .withName("remove first")
+                .withName("remove_first")
                 .withQuantityOfArgs(0)
                 .withDescription("print first element and remove it")
                 .withGeneratesStudyGroup(false));

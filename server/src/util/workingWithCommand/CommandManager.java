@@ -4,6 +4,7 @@ import managers.CollectionManager;
 import util.AvailableCommands;
 import util.Request;
 import util.Response;
+import util.ResponseBuilder;
 
 public class CommandManager {
     private static boolean statusOfCommandListening = true;
@@ -14,8 +15,12 @@ public class CommandManager {
         availableCommands = new AvailableCommands(collectionManager);
     }
 
-    public Response executeClientCommand(Request request) {
+    public Response executeClientCommand(Request request) throws NullPointerException {
+        try {
         return AvailableCommands.CLIENT_AVAILABLE_COMMANDS.get(request.getCommandName()).executeCommand(request);
+        } catch (NullPointerException e){
+            return (new Response(new ResponseBuilder().withMessageToResponse(e.getMessage()))) ;
+        }
     }
 
     public String executeServerCommand(String commandName) {

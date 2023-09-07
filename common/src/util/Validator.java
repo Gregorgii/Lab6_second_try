@@ -1,5 +1,6 @@
 package util;
 
+import java.time.format.DateTimeParseException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.function.Function;
@@ -45,7 +46,7 @@ public class Validator<T> {
         if (!"null".equals(string)) {
             try {
                 value = function.apply(string);
-            } catch (IllegalArgumentException e) {
+            } catch (IllegalArgumentException | DateTimeParseException e) {
                 throw new IllegalArgumentException("Error in checking func, " + description);
             }
         }
