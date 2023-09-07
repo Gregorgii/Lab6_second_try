@@ -1,6 +1,8 @@
 package util.workingWithClient;
 
 
+import util.SocketInitializer;
+
 import java.net.SocketException;
 import java.util.Scanner;
 

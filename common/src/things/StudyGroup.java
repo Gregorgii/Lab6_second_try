@@ -1,7 +1,6 @@
 package things;
 
 import com.opencsv.bean.CsvBindByName;
-import com.opencsv.bean.CsvCustomBindByName;
 import com.opencsv.bean.CsvRecurse;
 import condition.StudyGroupGenerator;
 
@@ -20,7 +19,7 @@ public class StudyGroup implements Comparable<StudyGroup> {
     private String name; //Поле не может быть null, Строка не может быть пустой
     @CsvRecurse
     private Coordinates coordinates; //Поле не может быть null
-    @CsvCustomBindByName(column = "CREATIONDATE", required = true, converter = DateConverter.class)
+
     private ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
 
     @CsvBindByName(column = "STUDENTSCOUNT", required = true)

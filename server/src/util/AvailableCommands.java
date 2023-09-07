@@ -1,14 +1,13 @@
-import commands.*;
-import commands.clientCommands.AbstractClientCommand;
-import commands.clientCommands.AddCommand;
+package util;
+
+import commands.clientCommands.*;
 import commands.serverCommands.AbstractServerCommand;
+import commands.serverCommands.ExitCommand;
+import commands.serverCommands.SaveCommand;
+import commands.serverCommands.ServerHelpCommand;
 import managers.CollectionManager;
 
 import java.util.HashMap;
-
-//TODO
-// AbstractServerCommand
-//  AvailableCommands
 
 public class AvailableCommands {
     public static final HashMap<String, AbstractClientCommand> CLIENT_AVAILABLE_COMMANDS = new HashMap<>();
@@ -22,11 +21,13 @@ public class AvailableCommands {
         AbstractClientCommand updateCommand = new UpdateCommand(collectionManager);
         AbstractClientCommand removeByIdCommand = new RemoveByIdCommand(collectionManager);
         AbstractClientCommand clearCommand = new ClearCommand(collectionManager);
-        AbstractClientCommand removeHead = new RemoveHeadCommand(collectionManager);
-        AbstractClientCommand removeLower = new RemoveLoverCommand(collectionManager);
-        AbstractClientCommand removeAllByMinutesOfWaiting = new RemoveAllByMinutesOfWaitingCommand(collectionManager);
-        AbstractClientCommand sumOfMinutesOfWaiting = new SumOfMinutesOfWaitingCommand(collectionManager);
-        AbstractClientCommand countByImpactSpeed = new CountByImpactSpeedCommand(collectionManager);
+        AbstractClientCommand countGreaterThanTransferredStudentsCommand = new CountGreaterThanTransferredStudentsCommand(collectionManager);
+        AbstractClientCommand printFieldDescendingSemesterEnumCommand = new PrintFieldDecsendingSemesterEnumCommand(collectionManager);
+        AbstractClientCommand removeFirstCommand = new RemoveFirstCommand(collectionManager);
+        AbstractClientCommand addIfMaxCommand = new AddIfMaxCommand(collectionManager);
+        AbstractClientCommand removeGreaterCommand = new RemoveGreaterCommand(collectionManager);
+        AbstractClientCommand removeAnyByShouldBeExpelled = new RemoveAnyByShouldBeExpelledCommand(collectionManager);
+
 
         CLIENT_AVAILABLE_COMMANDS.put(clientHelpCommand.getName(), clientHelpCommand);
         CLIENT_AVAILABLE_COMMANDS.put(infoCommand.getName(), infoCommand);
@@ -35,12 +36,15 @@ public class AvailableCommands {
         CLIENT_AVAILABLE_COMMANDS.put(updateCommand.getName(), updateCommand);
         CLIENT_AVAILABLE_COMMANDS.put(removeByIdCommand.getName(), removeByIdCommand);
         CLIENT_AVAILABLE_COMMANDS.put(clearCommand.getName(), clearCommand);
-        CLIENT_AVAILABLE_COMMANDS.put(removeHead.getName(), removeHead);
-        CLIENT_AVAILABLE_COMMANDS.put(removeLower.getName(), removeLower);
-        CLIENT_AVAILABLE_COMMANDS.put(historyCommand.getName(), historyCommand);
-        CLIENT_AVAILABLE_COMMANDS.put(removeAllByMinutesOfWaiting.getName(), removeAllByMinutesOfWaiting);
-        CLIENT_AVAILABLE_COMMANDS.put(sumOfMinutesOfWaiting.getName(), sumOfMinutesOfWaiting);
-        CLIENT_AVAILABLE_COMMANDS.put(countByImpactSpeed.getName(), countByImpactSpeed);
+        CLIENT_AVAILABLE_COMMANDS.put(countGreaterThanTransferredStudentsCommand.getName(), countGreaterThanTransferredStudentsCommand);
+        CLIENT_AVAILABLE_COMMANDS.put(printFieldDescendingSemesterEnumCommand.getName(), printFieldDescendingSemesterEnumCommand);
+        CLIENT_AVAILABLE_COMMANDS.put(removeFirstCommand.getName(), removeFirstCommand);
+        CLIENT_AVAILABLE_COMMANDS.put(addIfMaxCommand.getName(), addIfMaxCommand);
+        CLIENT_AVAILABLE_COMMANDS.put(removeGreaterCommand.getName(), removeGreaterCommand);
+        CLIENT_AVAILABLE_COMMANDS.put(removeAnyByShouldBeExpelled.getName(), removeAnyByShouldBeExpelled);
+
+
+
 
         AbstractServerCommand serverHelpCommand = new ServerHelpCommand(SERVER_AVAILABLE_COMMANDS);
         AbstractServerCommand saveCommand = new SaveCommand(collectionManager);

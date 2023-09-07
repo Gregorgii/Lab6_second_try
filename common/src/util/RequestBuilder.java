@@ -29,7 +29,7 @@ public class RequestBuilder {
             return this;
         }
 
-        public RequestBuilder withHumanBeingArgument(StudyGroup studyGroupArgument) {
+        public RequestBuilder withStudyGroupArgument(StudyGroup studyGroupArgument) {
             this.studyGroupArgument = studyGroupArgument;
             return this;
         }

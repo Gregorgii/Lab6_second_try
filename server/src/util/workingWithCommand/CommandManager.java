@@ -1,8 +1,9 @@
 package util.workingWithCommand;
 
-import com.sun.net.httpserver.Request;
-
-import java.time.format.DateTimeFormatter;
+import managers.CollectionManager;
+import util.AvailableCommands;
+import util.Request;
+import util.Response;
 
 public class CommandManager {
     private static boolean statusOfCommandListening = true;
@@ -14,8 +15,6 @@ public class CommandManager {
     }
 
     public Response executeClientCommand(Request request) {
-        commandHistory.pushCommand(request.getCurrentTime().format(DateTimeFormatter.ofPattern("HH:mm:ss"))
-                + " " + request.getClientInfo() + ": " + request.getCommandName());
         return AvailableCommands.CLIENT_AVAILABLE_COMMANDS.get(request.getCommandName()).executeCommand(request);
     }
 

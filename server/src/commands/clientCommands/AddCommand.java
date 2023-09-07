@@ -1,7 +1,9 @@
 package commands.clientCommands;
 
-import com.sun.net.httpserver.Request;
+import util.Request;
 import managers.CollectionManager;
+import util.Response;
+import util.ResponseBuilder;
 
 
 public class AddCommand extends AbstractClientCommand {
@@ -13,13 +15,15 @@ public class AddCommand extends AbstractClientCommand {
                 .withName("add")
                 .withQuantityOfArgs(0)
                 .withDescription("Add new elem to collection")
-                .withGeneratesStudentGroup(true));
+                .withGeneratesStudyGroup(true));
         this.collectionManager = collectionManager;
     }
 
     @Override
     public Response executeCommand(Request request){
-        return new Respose(new ResponseBuilder)
+        return new Response(new ResponseBuilder()
+                .withMessageToResponse(collectionManager
+                        .add(request.getStudyGroupArgument())));
     }
 
 }

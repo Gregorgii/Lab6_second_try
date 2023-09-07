@@ -1,11 +1,13 @@
+import generators.CollectionManagerGenerator;
 import managers.CollectionManager;
 import util.ServerApplication;
 import util.workingWithClient.GeneratorServerSocketWorker;
 import util.workingWithClient.ServerSocketWorker;
+import util.workingWithCommand.CommandManager;
+import util.workingWithCommand.FileManager;
 import util.workingWithCommand.ServerCommandListener;
 
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.Scanner;
 
 public class Server {
@@ -14,20 +16,18 @@ public class Server {
     public Server(String fileName){ this.fileName = fileName; }
 
     public void startServer() throws IOException {
-        try{
-            CollectionManager collectionManager = new CollectionManager(Path.of(fileName));
-            collectionManager.fillCollectionFromFile();
+        try {
+            FileManager fileManager = new FileManager(fileName);
+            CollectionManagerGenerator collectionManagerGenerator = new CollectionManagerGenerator(fileManager);
+            CollectionManager collectionManager = collectionManagerGenerator.getCollectionManager();
+            CommandManager commandManager = new CommandManager(collectionManager);
             Scanner scanner = new Scanner(System.in);
             GeneratorServerSocketWorker generatorServerSocketWorker = new GeneratorServerSocketWorker(scanner);
             ServerSocketWorker serverSocketWorker = generatorServerSocketWorker.getServerSocketWorker();
-            ServerApplication serverApplication = new ServerApplication(serverSocketWorker, )
-
-
-
-
+            ServerApplication serverApplication = new ServerApplication(serverSocketWorker, commandManager);
+            serverApplication.start();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
-
     }
 }
