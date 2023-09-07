@@ -4,58 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="goddamn, i did a lot of. it's not too far">
-      <change afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/ClientSocketWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/GeneratorClientSocketWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/ReceiveResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/AbstractServerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/AddIfMaxCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/ClearCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/ClientHelpCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/CountGreaterThanTransferredStudentsCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/InfoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/PrintFieldDecsendingSemesterEnumCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveAnyByShouldBeExpelledCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveByIdCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveFirstCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveGreaterCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/ShowCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/UpdateCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/serverCommands/ExitCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/serverCommands/SaveCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/commands/serverCommands/ServerHelpCommand.java" afterDir="false" />
+    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="hell yeah, last commits">
+      <change afterPath="$PROJECT_DIR$/client/src/commands/ExecuteScriptCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/commands/ExitCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/generators/ConsoleStudyGroupGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/generators/ScriptStudyGroupGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/util/workingWithCommand/AvailableCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/util/workingWithCommand/CommandListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/util/workingWithCommand/CommandManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/util/workingWithCommand/CommandToSend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/RequestCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/SendRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commands/todo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/things/StudyGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/StudyGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/util/RequestBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/util/RequestBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/AvailableCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/util/AvailableCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/AddIfMaxCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/ClearCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/CommandInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/CountGreaterThanTransferredStudentsCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/ExecuteScriptCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/Executor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/ExitCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/HelpCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/InfoCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/PrintFieldDescendingSemesterEnumCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/RemoveAnyByShouldBeExpelledCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/RemoveByIdCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/RemoveFirstCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/RemoveGreaterCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/SaveCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/ShowCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/UpdateCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/AbstractClientCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/AbstractClientCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/util/ServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/util/ServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/util/workingWithClient/GeneratorServerSocketWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/util/workingWithClient/GeneratorServerSocketWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/util/workingWithCommand/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/util/workingWithCommand/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/generators/todo" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +157,7 @@
       <workItem from="1693766612236" duration="3339000" />
       <workItem from="1693771489343" duration="1166000" />
       <workItem from="1693985683236" duration="14254000" />
-      <workItem from="1694028263656" duration="19078000" />
+      <workItem from="1694028263656" duration="23668000" />
     </task>
     <task id="LOCAL-00001" summary="started writing server">
       <option name="closed" value="true" />
@@ -245,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694037143267</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="hell yeah, last commits">
+      <option name="closed" value="true" />
+      <created>1694097315066</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694097315066</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +239,8 @@
     <MESSAGE value="refactor to builders and generators instead of IOmngr" />
     <MESSAGE value="parser made and exception mngr" />
     <MESSAGE value="goddamn, i did a lot of. it's not too far" />
-    <option name="LAST_COMMIT_MESSAGE" value="goddamn, i did a lot of. it's not too far" />
+    <MESSAGE value="hell yeah, last commits" />
+    <option name="LAST_COMMIT_MESSAGE" value="hell yeah, last commits" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
