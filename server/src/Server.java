@@ -1,6 +1,7 @@
 import generators.CollectionManagerGenerator;
 import managers.CollectionManager;
-import util.ServerApplication;
+import util.ConsoleThread;
+import util.RequestThread;
 import util.workingWithClient.GeneratorServerSocketWorker;
 import util.workingWithClient.ServerSocketWorker;
 import util.workingWithCommand.CommandManager;
@@ -24,8 +25,10 @@ public class Server {
             Scanner scanner = new Scanner(System.in);
             GeneratorServerSocketWorker generatorServerSocketWorker = new GeneratorServerSocketWorker(scanner);
             ServerSocketWorker serverSocketWorker = generatorServerSocketWorker.getServerSocketWorker();
-            ServerApplication serverApplication = new ServerApplication(serverSocketWorker, commandManager);
-            serverApplication.start();
+            RequestThread requestThread = new RequestThread(serverSocketWorker, commandManager);
+            ConsoleThread consoleThread = new ConsoleThread(serverCommandListener, commandManager, scanner);
+            requestThread.start();
+            consoleThread.start();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

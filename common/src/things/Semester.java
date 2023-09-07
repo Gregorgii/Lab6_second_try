@@ -8,4 +8,13 @@ public enum Semester {
     FIFTH,
     SEVENTH,
     EIGHTH;
+
+    public static String show() {
+        StringBuilder stringWeaponType = new StringBuilder();
+        for (Semester i : values()) {
+            stringWeaponType.append(i);
+            stringWeaponType.append("\n");
+        }
+        return stringWeaponType.toString();
+    }
 }

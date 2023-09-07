@@ -89,7 +89,7 @@ public class FromFileStudyGroupGenerator extends Condition {
             super.setSemesterEnum(new Validator<Semester>(stringStudyGroup[6])
                     .withCheckingNull(false)
                     .withCheckingFunction(Semester::valueOf,
-                            "semester must be from: \n" + Semester.values() + "with right register")
+                            "semester must be from: \n" + Semester.show() + "with right register")
                     .getValue());
         }catch (IllegalArgumentException e){
             super.getErrs().add(e.getMessage());

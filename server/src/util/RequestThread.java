@@ -5,28 +5,28 @@ import util.workingWithCommand.CommandManager;
 
 import java.io.IOException;
 
-public class ServerApplication {
+public class RequestThread extends Thread {
     private final ServerSocketWorker serverSocketWorker;
     private final CommandManager commandManager;
 
-    public ServerApplication(ServerSocketWorker serverSocketWorker, CommandManager commandManager) {
+    public RequestThread(ServerSocketWorker serverSocketWorker, CommandManager commandManager) {
         this.serverSocketWorker = serverSocketWorker;
         this.commandManager = commandManager;
     }
 
-    public void start() {
-        try {
-            while (commandManager.getStatusOfCommandListening()) {
+    @Override
+    public void run() {
+        while (commandManager.getStatusOfCommandListening()) {
+            try {
                 Request acceptedRequest = serverSocketWorker.receiveRequest();
                 Response responseToSend = commandManager.executeClientCommand(acceptedRequest);
                 serverSocketWorker.sendResponse(responseToSend);
+            } catch (IOException e) {
+                System.out.println("Error at work with client's request");
+            } catch (ClassNotFoundException e) {
+                System.out.println("Incorrect request from client");
             }
-        } catch ( IOException e) {
-            System.out.println("Ошибка при обработке запроса от клиента");
-        } catch (ClassNotFoundException e) {
-            System.out.println("Пришел некорректный запрос от клиента");
-        } finally {
-            serverSocketWorker.stopServer();
         }
+        serverSocketWorker.stopServer();
     }
 }

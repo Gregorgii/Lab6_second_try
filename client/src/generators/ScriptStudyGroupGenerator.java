@@ -7,6 +7,7 @@ import util.Parser;
 import util.Validator;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class ScriptStudyGroupGenerator extends Condition {
@@ -115,7 +116,7 @@ public class ScriptStudyGroupGenerator extends Condition {
             super.setPassportID(new Validator<String>(stringStudyGroup[10])
                     .withCheckingNull(false)
                     .getValue());
-        } catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException|DateTimeParseException e){
             super.getErrs().add(e.getMessage());
         }
     }

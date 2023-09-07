@@ -6,6 +6,7 @@ import things.Semester;
 import util.Validator;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class ConsoleStudyGroupGenerator extends Condition {
@@ -51,7 +52,7 @@ public class ConsoleStudyGroupGenerator extends Condition {
         super.setX(new Validator<Double>(super.getScanner())
                 .withCheckingNull(false)
                 .withCheckingFunction(Double::parseDouble, "type of x must be Double")
-                .withCheckingPredicate(arg -> (int) arg > Coordinates.X_MIN,
+                .withCheckingPredicate(arg -> (double) arg > Coordinates.X_MIN,
                         "value of x must be greater than " + Coordinates.X_MIN)
                 .getValue());
 
@@ -68,7 +69,7 @@ public class ConsoleStudyGroupGenerator extends Condition {
             super.setStudentsCount(new Validator<Long>(super.getScanner())
                     .withCheckingNull(false)
                     .withCheckingFunction(Long::parseLong, "Count of students must be Long")
-                    .withCheckingPredicate(arg -> (int) arg > 0,
+                    .withCheckingPredicate(arg -> (long) arg > 0,
                             "Value of students count must be greater than 0")
                     .getValue());
         }
@@ -96,11 +97,11 @@ public class ConsoleStudyGroupGenerator extends Condition {
             super.setSemesterEnum(new Validator<Semester>(super.getScanner())
                     .withCheckingNull(false)
                     .withCheckingFunction(Semester::valueOf,
-                            "semester must be from: \n" + Semester.values() + "with right register")
+                            "semester must be from: \n" + Semester.show() + "with right register")
                     .getValue());
         }
 
-    public void setGroupAdmin() throws IllegalArgumentException {
+    public void setGroupAdmin() throws IllegalArgumentException, DateTimeParseException {
         super.setPersonName(new Validator<String>(super.getScanner())
                 .withCheckingNull(false)
                 .getValue());
@@ -111,7 +112,7 @@ public class ConsoleStudyGroupGenerator extends Condition {
         super.setWeight(new Validator<Long>(super.getScanner())
                 .withCheckingNull(true)
                 .withCheckingFunction(Long::parseLong, "Weight must be Long or null")
-                .withCheckingPredicate(arg -> (int) arg > 0,
+                .withCheckingPredicate(arg -> (Long) arg > 0,
                         "Value of weight must be greater than 0")
                 .getValue());
         super.setPassportID(new Validator<String>(super.getScanner())
