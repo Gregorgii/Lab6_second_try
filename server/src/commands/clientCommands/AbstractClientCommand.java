@@ -75,6 +75,7 @@ public abstract class AbstractClientCommand {
         }
 
         public AbstractCommandBuilder withGeneratesStudyGroup(boolean generatesStudyGroup) {
+            this.generatesStudyGroup = generatesStudyGroup;
             return this;
         }
     }

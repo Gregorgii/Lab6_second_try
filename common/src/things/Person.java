@@ -1,14 +1,15 @@
 package things;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
 * The class Person th work w persons
 */
 
-public class Person {
+public class Person implements Serializable {
 
-    private String name; //Поле не может быть null, Строка не может быть пустой
+    private String personName; //Поле не может быть null, Строка не может быть пустой
 
     private LocalDate birthday; //Поле не может быть null
 
@@ -16,14 +17,9 @@ public class Person {
 
     private String passportID; //Строка не может быть пустой, Поле не может быть null
 
-    /**
-     * @param name
-     * @param birthday
-     * @param weight
-     * @param passportID
-     */
-    public Person(String name, LocalDate birthday, Long weight, String passportID){
-        this.name = name;
+
+    public Person(String personName, LocalDate birthday, Long weight, String passportID){
+        this.personName = personName;
         this.birthday = birthday;
         this.weight = weight;
         this.passportID = passportID;
@@ -36,8 +32,8 @@ public class Person {
 
     }
 
-    public String getName(){
-        return name;
+    public String getPersonName(){
+        return personName;
     }
     /**
      * @return The persons bday
@@ -64,7 +60,7 @@ public class Person {
 
     @Override
     public String toString(){
-        return " Admin with name " + name + " and with birthday " + birthday + "\n"
+        return " Admin with name " + personName + " and with birthday " + birthday + "\n"
                 + "and passport ID " + passportID + "\n";
     }
     

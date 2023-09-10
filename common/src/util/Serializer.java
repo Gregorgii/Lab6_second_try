@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.nio.ByteBuffer;
 
-public class Serializer {
-    private Serializer(){
+public final class Serializer {
+    private Serializer() {
     }
 
-    public static ByteBuffer serializeRequest(Request request) throws IOException{
+    public static ByteBuffer serializeRequest(Request request) throws IOException {
         try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
              ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream)) {
             objectOutputStream.writeObject(request);
@@ -19,8 +19,8 @@ public class Serializer {
     }
 
     public static byte[] serializeResponse(Response response) throws IOException {
-        try(ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream)) {
+        try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+             ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream)) {
             objectOutputStream.writeObject(response);
             objectOutputStream.flush();
             return byteArrayOutputStream.toByteArray();

@@ -16,7 +16,7 @@ public class FromFileStudyGroupGenerator extends Condition {
 
     public void setName(){
         try{
-            super.setName(new Validator<String>(stringStudyGroup[0])
+            super.setGroupName(new Validator<String>(stringStudyGroup[0])
                     .withCheckingNull(false)
                     .getValue());
         } catch (IllegalArgumentException e){
@@ -29,7 +29,7 @@ public class FromFileStudyGroupGenerator extends Condition {
             super.setX(new Validator<Double>(stringStudyGroup[1])
                     .withCheckingNull(false)
                     .withCheckingFunction(Double::parseDouble, "type of x must be Double")
-                    .withCheckingPredicate(arg -> (int) arg > Coordinates.X_MIN,
+                    .withCheckingPredicate(arg -> (double) arg > Coordinates.X_MIN,
                             "value of x must be greater than " + Coordinates.X_MIN)
                     .getValue());
         } catch (IllegalArgumentException e) {
@@ -50,7 +50,7 @@ public class FromFileStudyGroupGenerator extends Condition {
             super.setStudentsCount(new Validator<Long>(stringStudyGroup[3])
                     .withCheckingNull(false)
                     .withCheckingFunction(Long::parseLong, "Count of students must be Long")
-                    .withCheckingPredicate(arg -> (int) arg > 0,
+                    .withCheckingPredicate(arg -> (long) arg > 0,
                             "Value of students count must be greater than 0")
                     .getValue());
         } catch (IllegalArgumentException e){
@@ -109,7 +109,7 @@ public class FromFileStudyGroupGenerator extends Condition {
             super.setWeight(new Validator<Long>(stringStudyGroup[9])
                     .withCheckingNull(true)
                     .withCheckingFunction(Long::parseLong, "Weight must be Long or null")
-                    .withCheckingPredicate(arg -> (int) arg > 0,
+                    .withCheckingPredicate(arg -> (long) arg > 0,
                             "Value of weight must be greater than 0")
                     .getValue());
             super.setPassportID(new Validator<String>(stringStudyGroup[10])

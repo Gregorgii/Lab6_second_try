@@ -6,9 +6,6 @@ import util.Response;
 import java.io.IOException;
 
 public final class ReceiveResponse {
-    private ReceiveResponse() {
-    }
-
     public static void receiveResponse(ClientSocketWorker clientSocketWorker) {
         try {
             Response response = null;

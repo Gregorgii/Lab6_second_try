@@ -49,7 +49,8 @@ public class CollectionManager {
         if (groupCollection.isEmpty()) {
             throw new IllegalArgumentException("Collection is empty");
         } else {
-            groupCollection.forEach(sg -> string.append(sg.toString()).append("\n"));
+            List<StudyGroup> sortedList = groupCollection.stream().sorted().toList();
+            sortedList.forEach(sg -> string.append(sg.toString()).append("\n"));
         }
         return string.toString();
     }

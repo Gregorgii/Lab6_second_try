@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 import java.util.Scanner;
 
 public abstract class Condition {
-    private String name;
+    private String groupName;
     private Double x;
     private Float y;
     private Long studentsCount;
@@ -32,7 +32,7 @@ public abstract class Condition {
             System.out.println(errs.remove());
         }
     }
-    public String getName() { return name; }
+    public String getGroupName() { return groupName; }
 
     public Double getX() {return x; }
 
@@ -54,7 +54,7 @@ public abstract class Condition {
 
     public String getPassportID() {return passportID; }
 
-    public void setName(String name) {this.name = name; }
+    public void setGroupName(String groupName) {this.groupName = groupName; }
 
     public void setX(Double x) {this.x = x; }
 

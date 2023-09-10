@@ -1,9 +1,10 @@
 package things;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class StudyGroupBuilder {
-    private String name;
+public class StudyGroupBuilder implements Serializable {
+    private String groupName;
     private Coordinates coordinates;
     private Long studentsCount;
     private Integer shouldBeExpelled;
@@ -11,8 +12,8 @@ public class StudyGroupBuilder {
     private Semester semesterEnum;
     private  Person groupAdmin;
 
-    public StudyGroupBuilder withName(String name) {
-        this.name = name;
+    public StudyGroupBuilder withGroupName(String groupName) {
+        this.groupName = groupName;
         return this;
     }
 
@@ -45,8 +46,8 @@ public class StudyGroupBuilder {
         return this;
     }
 
-    public String getName() {
-        return name;
+    public String getGroupName() {
+        return groupName;
     }
 
     public Coordinates getCoordinates() {

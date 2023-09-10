@@ -32,11 +32,11 @@ public class Parser {
 
     public static String studyGroupToStringParser(StudyGroup studyGroup){
         String string = "";
-        string += studyGroup.getName() + "," + studyGroup.getCoordinates().getX() + ","
+        string += studyGroup.getGroupName() + "," + studyGroup.getCoordinates().getX() + ","
                 + studyGroup.getCoordinates().getY() + "," + studyGroup.getStudentsCount() + ","
                 + (studyGroup.getShouldBeExpelled() == null ? "null" : studyGroup.getShouldBeExpelled()) + ","
                 + (studyGroup.getTransferredStudents() == null ? "null" : studyGroup.getTransferredStudents()) + ","
-                + studyGroup.getSemesterEnum() + "," + studyGroup.getGroupAdmin().getName() + ","
+                + studyGroup.getSemesterEnum() + "," + studyGroup.getGroupAdmin().getPersonName() + ","
                 + studyGroup.getGroupAdmin().getBirthday() + "," + studyGroup.getGroupAdmin().getWeight() + ","
                 + studyGroup.getGroupAdmin().getPassportID() + "\n";
         return string;

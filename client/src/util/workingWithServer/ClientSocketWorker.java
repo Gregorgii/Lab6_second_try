@@ -36,10 +36,13 @@ public class ClientSocketWorker {
 
     public void sendRequest(Request request) throws IOException {
         try {
+            if (request == null) {
+                throw new IllegalArgumentException("Request cannot be null");
+            }
             ByteBuffer bufferToSend = Serializer.serializeRequest(request);
             datagramChannel.send(bufferToSend, socketAddress);
-        } catch (IOException e) {
-            throw new IOException("Произошла ошибка при отправке запроса");
+        } catch (NullPointerException e) {
+            throw new IOException("Failed to send request: " + e.getMessage());
         }
     }
 

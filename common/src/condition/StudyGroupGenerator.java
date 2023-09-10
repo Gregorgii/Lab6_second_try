@@ -12,7 +12,7 @@ public class StudyGroupGenerator {
         condition.generateStudyGroupFields();
         if (condition.isCorrect()){
             this.studyGroup = new StudyGroup(new StudyGroupBuilder()
-                    .withName(condition.getName())
+                    .withGroupName(condition.getGroupName())
                     .withCoordinates(condition.getX(), condition.getY())
                     .withStudentsCount(condition.getStudentsCount())
                     .withShouldBeExpelled(condition.getShouldBeExpelled())

@@ -23,19 +23,19 @@ public class AvailableCommands {
                 "clear",
                 "exit",
                 "remove first",
-                "print field descending semester");
+                "print_field_descending_semester");
         Collections.addAll(COMMANDS_WITH_STUDY_GROUP_ARG,
                 "add",
-                "remove greater",
-                "add if max");
+                "remove_greater",
+                "add_if_max");
         Collections.addAll(COMMANDS_WITH_ID_ARG,
-                "remove by id");
+                "remove_by_id");
         Collections.addAll(COMMANDS_WITH_STUDY_GROUP_AND_ID_ARG,
                 "update");
         Collections.addAll(COMMANDS_WITH_TRANSFERRED_ARG,
-                "count greater than transferred");
+                "count_greater_than_transferred");
         Collections.addAll(COMMANDS_WITH_EXPELLED_ARG,
-                "remove any by should be expelled");
+                "remove_any_by_should_be_expelled");
 
     }
 

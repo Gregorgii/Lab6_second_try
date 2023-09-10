@@ -10,31 +10,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="work program is somewhere around, it smells like napalm">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/client_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a746d0b8-0ef2-41ff-89e2-3e449071dcfb" name="Changes" comment="it's okay, but something wrong with sender. check it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/generators/ConsoleStudyGroupGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/generators/ConsoleStudyGroupGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/generators/ScriptStudyGroupGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/generators/ScriptStudyGroupGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/util/workingWithCommand/AvailableCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/util/workingWithCommand/AvailableCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/util/workingWithServer/ClientSocketWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/ClientSocketWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/util/workingWithServer/ReceiveResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/ReceiveResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/util/workingWithServer/RequestCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/RequestCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/util/workingWithServer/SendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/util/workingWithServer/SendRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/exceptions/NotEnoughArgs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/exceptions/WrongArgument.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/exceptions/WrongField.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/condition/Condition.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/condition/Condition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/condition/StudyGroupGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/condition/StudyGroupGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/things/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/Coordinates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/things/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/things/Semester.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/Semester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/things/StudyGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/StudyGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/util/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/util/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/things/StudyGroupBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/things/StudyGroupBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/util/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/util/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/util/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/util/Serializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/AbstractClientCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/AbstractClientCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/AddIfMaxCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/CountGreaterThanTransferredStudentsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/CountGreaterThanTransferredStudentsCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/PrintFieldDecsendingSemesterEnumCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/PrintFieldDecsendingSemesterEnumCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveAnyByShouldBeExpelledCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveAnyByShouldBeExpelledCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveByIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveFirstCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveFirstCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commands/clientCommands/RemoveGreaterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/util/workingWithCommand/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/util/workingWithCommand/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/generators/FromFileStudyGroupGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/generators/FromFileStudyGroupGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/managers/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/managers/CollectionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +97,6 @@
     "Repository.Attach.Sources": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "18",
@@ -132,24 +130,10 @@
       <recent name="managers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Client" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Client" />
-      <module name="client" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="client" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="server" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,19 +145,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server" />
-      <module name="server" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +165,7 @@
       <workItem from="1693766612236" duration="3339000" />
       <workItem from="1693771489343" duration="1166000" />
       <workItem from="1693985683236" duration="14254000" />
-      <workItem from="1694028263656" duration="30916000" />
+      <workItem from="1694028263656" duration="41234000" />
     </task>
     <task id="LOCAL-00001" summary="started writing server">
       <option name="closed" value="true" />
@@ -264,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694103984334</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="it's okay, but something wrong with sender. check it">
+      <option name="closed" value="true" />
+      <created>1694109137221</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694109137221</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +274,8 @@
     <MESSAGE value="hell yeah, last commits" />
     <MESSAGE value="is it final?" />
     <MESSAGE value="work program is somewhere around, it smells like napalm" />
-    <option name="LAST_COMMIT_MESSAGE" value="work program is somewhere around, it smells like napalm" />
+    <MESSAGE value="it's okay, but something wrong with sender. check it" />
+    <option name="LAST_COMMIT_MESSAGE" value="it's okay, but something wrong with sender. check it" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

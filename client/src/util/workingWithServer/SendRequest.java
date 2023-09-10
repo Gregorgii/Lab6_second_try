@@ -18,10 +18,8 @@ public final class SendRequest {
             request.setClientInfo(clientSocketWorker.getAddress() + " " + clientSocketWorker.getPort());
             clientSocketWorker.sendRequest(request);
             return true;
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException | IOException e) {
             System.out.println(e.getMessage());
-        } catch (IOException e) {
-            System.out.println("Произошла ошибка при отправке запроса, повторите попытку");
         }
         return false;
     }

@@ -42,7 +42,7 @@ public class RequestCreator {
         Integer id = new Validator<Integer>(command.getCommandArgs()[0])
                 .withCheckingNull(false)
                 .withCheckingFunction(Integer::parseInt, "value of id must be a number")
-                .withCheckingPredicate(arg -> (Long) arg > 0, "id must be greater than 0")
+                .withCheckingPredicate(arg -> (int) arg > 0, "id must be greater than 0")
                 .getValue();
         return new Request(new RequestBuilder()
                 .withName(command.getCommandName())

@@ -3,6 +3,7 @@ package things;
 
 import condition.StudyGroupGenerator;
 
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 
 
@@ -10,12 +11,12 @@ import java.time.ZonedDateTime;
 * The hugest class that include all info about students and calls Study group
 */
 
-public class StudyGroup implements Comparable<StudyGroup> {
+public class StudyGroup implements Comparable<StudyGroup>, Serializable {
     private static final StudyGroupGenerator STUDY_GROUP_GENERATOR = new StudyGroupGenerator();
 
     private Integer id;//Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
 
-    private String name; //Поле не может быть null, Строка не может быть пустой
+    private String groupName; //Поле не может быть null, Строка не может быть пустой
 
     private Coordinates coordinates; //Поле не может быть null
 
@@ -33,7 +34,7 @@ public class StudyGroup implements Comparable<StudyGroup> {
     private Person groupAdmin; //Поле не может быть null
 
     public StudyGroup(StudyGroupBuilder studyGroupBuilder){
-        this.name = studyGroupBuilder.getName();
+        this.groupName = studyGroupBuilder.getGroupName();
         this.coordinates = studyGroupBuilder.getCoordinates();
         this.studentsCount = studyGroupBuilder.getStudentsCount();
         this.shouldBeExpelled = studyGroupBuilder.getShouldBeExpelled();
@@ -59,8 +60,8 @@ public class StudyGroup implements Comparable<StudyGroup> {
     /**
     * @return The info about Study Group (name)
     */
-    public String getName(){
-        return name;
+    public String getGroupName(){
+        return groupName;
     }
     /**
     * @return The info about Study Group (coordinates)
@@ -118,14 +119,14 @@ public class StudyGroup implements Comparable<StudyGroup> {
 
     @Override
     public int compareTo(StudyGroup o) {
-        return name.compareTo(o.getName());
+        return groupName.compareTo(o.getGroupName());
     }
 
     @Override
     public String toString(){
-        return "Name of group " + name + " with id: " + id + "\n"
+        return "Name of group " + groupName + " with id: " + id + "\n"
                 + "with count of students " + studentsCount +" and should be expelled " + shouldBeExpelled + "\n"
                 + "with transferred students " + transferredStudents + " and semester " + semesterEnum + "\n"
-                + "and with group admin " + groupAdmin.toString() + "\n";
+                + "and with group admin " + groupAdmin.toString();
     }
 }

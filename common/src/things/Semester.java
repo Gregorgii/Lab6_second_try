@@ -1,8 +1,11 @@
 package things;
+
+import java.io.Serializable;
+
 /**
 * The enum that include number of sem.
 */
-public enum Semester {
+public enum Semester implements Serializable {
     SECOND,
     THIRD,
     FIFTH,

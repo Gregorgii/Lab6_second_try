@@ -1,9 +1,11 @@
 package things;
 
+import java.io.Serializable;
+
 /**
 * Class that work w coordinates
 */
-public class Coordinates {
+public class Coordinates implements Serializable {
 
     private Double x; //Значение поля должно быть больше -771, Поле не может быть null
 

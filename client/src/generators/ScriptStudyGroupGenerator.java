@@ -15,9 +15,9 @@ public class ScriptStudyGroupGenerator extends Condition {
     private String[] stringStudyGroup;
     public ScriptStudyGroupGenerator(Scanner scanner){super(scanner);}
 
-    public void setName(){
+    public void setGroupName(){
         try{
-            super.setName(new Validator<String>(stringStudyGroup[0])
+            super.setGroupName(new Validator<String>(stringStudyGroup[0])
                     .withCheckingNull(false)
                     .getValue());
         } catch (IllegalArgumentException e){
@@ -134,7 +134,7 @@ public class ScriptStudyGroupGenerator extends Condition {
         try{
             stringStudyGroup = Parser.stringToStudyGroupStringParserFromFile(super.getScanner());
             Validator.validateQuantityOfArgs(stringStudyGroup, QUANTITY_OF_ARGS);
-            setName();
+            setGroupName();
             setCoordinates();
             setStudentsCount();
             setTransferredStudents();

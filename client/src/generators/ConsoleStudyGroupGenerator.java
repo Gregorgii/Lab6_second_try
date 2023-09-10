@@ -16,7 +16,7 @@ public class ConsoleStudyGroupGenerator extends Condition {
 
     @Override
     public void generateStudyGroupFields() {
-        setValue("Set name of study group", this::setName);
+        setValue("Set name of study group", this::setGroupName);
         setValue("Set coordinate X, min value is" + Coordinates.X_MIN , this::setX);
         setValue("Set coordinate Y", this::setY);
         setValue("Set students count in study group", this::setStudentsCount);
@@ -28,7 +28,7 @@ public class ConsoleStudyGroupGenerator extends Condition {
     }
 
     public void generateGroupAdminFields() {
-        setValue("Set name of admin", this::setName);
+        setValue("Set name of admin", this::setPersonName);
         setValue("Set birthday in format yyyy-MM-dd", this::setBirthday);
         setValue("Set weight", this::setWeight);
         setValue("Set passport id", this::setPassportId);
@@ -48,10 +48,10 @@ public class ConsoleStudyGroupGenerator extends Condition {
         }
     }
 
-    public void setName() throws IllegalArgumentException{
+    public void setGroupName() throws IllegalArgumentException{
 
-            super.setName(new Validator<String>(super.getScanner())
-                    .withCheckingNull(false)
+            super.setGroupName(new Validator<String>(super.getScanner())
+                    .withCheckingNull(true)
                     .getValue());
 
     }
